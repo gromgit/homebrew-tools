@@ -6,6 +6,14 @@ class Nsxiv < Formula
   license "GPL-2.0-or-later"
   head "https://codeberg.org/nsxiv/nsxiv.git", branch: "master"
 
+  bottle do
+    root_url "https://ghcr.io/v2/gromgit/tools"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma: "560437f950ad608763afc075e901199257586ef2d05d46d2ff49bf2492d9b468"
+    sha256 cellar: :any,                 ventura:      "cc1ab0fc81b7db8c75a8b729a36b50fd8d5347a54bf88c70d00303c79bec1ec2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "291482f86e15e9fd880e0674103b313a5affb34e768480b9937120404c15d508"
+  end
+
   depends_on "giflib"
   depends_on "imlib2"
   depends_on "libexif"
