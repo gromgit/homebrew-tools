@@ -1,5 +1,7 @@
 # Gromgit Tools
 
+A collection of miscellaneous tools I find useful, that aren't found in Homebrew core.
+
 ## How do I install these formulae?
 
 `brew install gromgit/tools/<formula>`
