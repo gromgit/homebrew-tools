@@ -1,8 +1,8 @@
 class Jf < Formula
   desc "JSON object formatter, printf-style"
   homepage "https://github.com/sayanarijit/jf"
-  url "https://github.com/sayanarijit/jf/archive/refs/tags/v0.6.2.tar.gz"
-  sha256 "909d3bc0b4e6c580b2ca811da821fa0b5ee025f85d7ba08d0f9fcea634187a8e"
+  url "https://github.com/sayanarijit/jf/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "fa7acd5cbe06513227a7a4ac5968cf159b742d2d89f9c90416681ce1d7ad04b3"
   license "MIT"
 
   bottle do
