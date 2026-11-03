@@ -1,8 +1,8 @@
 class Nsxiv < Formula
   desc "Neo Simple X Image Viewer"
   homepage "https://nsxiv.codeberg.page/"
-  url "https://codeberg.org/nsxiv/nsxiv/archive/refs/tags/v33.tar.gz"
-  sha256 "7562af026024c28a93f5ca0cefd170c6b139cf2974165bcd695932d2cd9345c5"
+  url "https://codeberg.org/nsxiv/nsxiv/archive/refs/tags/v34.tar.gz"
+  sha256 "eee8e947a0a4103d41d892c8b0c5ef1e5364a29a62821aab47feeb9c71a96474"
   license "GPL-2.0-or-later"
   head "https://codeberg.org/nsxiv/nsxiv.git", branch: "master"
 
@@ -14,16 +14,13 @@ class Nsxiv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "291482f86e15e9fd880e0674103b313a5affb34e768480b9937120404c15d508"
   end
 
+  depends_on "fontconfig"
   depends_on "giflib"
   depends_on "imlib2"
   depends_on "libexif"
   depends_on "libx11"
   depends_on "libxft"
   depends_on "webp"
-
-  on_ventura :or_older do
-    depends_on "fontconfig"
-  end
 
   on_linux do
     depends_on "inotify-tools"
@@ -32,7 +29,7 @@ class Nsxiv < Formula
   def install
     make_args = [
       "PREFIX=#{prefix}",
-      "CPPFLAGS=-I#{Formula["freetype2"].opt_include}/freetype2",
+      "CPPFLAGS=-I#{formula_opt_include("freetype2")}/freetype2",
       "LDLIBS=-lpthread",
     ]
     make_args << "HAVE_INOTIFY=0" if OS.mac?
