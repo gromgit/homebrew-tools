@@ -8,10 +8,11 @@ class Nsxiv < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/gromgit/tools"
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma: "560437f950ad608763afc075e901199257586ef2d05d46d2ff49bf2492d9b468"
-    sha256 cellar: :any,                 ventura:      "cc1ab0fc81b7db8c75a8b729a36b50fd8d5347a54bf88c70d00303c79bec1ec2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "291482f86e15e9fd880e0674103b313a5affb34e768480b9937120404c15d508"
+    sha256 cellar: :any, arm64_golden_gate: "61593aacd15bb24fafece470f2f3276eae00bb75be7d2009d54a54db13020a83"
+    sha256 cellar: :any, arm64_tahoe:       "5a4aea32091408979fd4a3b2cabec6cc24aa5c92ed643b853954782ad80d5932"
+    sha256 cellar: :any, arm64_sequoia:     "3bb9a9bff36b68ce81fcbfab813a87e9b25dff63203cf0ef761eff4a05fb32b8"
+    sha256 cellar: :any, arm64_linux:       "276970a6a7cc5a8737e1c1f201442e3ad8d31c5f4ab730d0ae7b4a83f9f0ea94"
+    sha256 cellar: :any, x86_64_linux:      "329ee83fe281a155e449e168c53e7616cc20c82ebe05917c88e7bd188813defb"
   end
 
   depends_on "fontconfig"
