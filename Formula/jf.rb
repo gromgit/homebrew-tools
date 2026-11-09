@@ -7,9 +7,11 @@ class Jf < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/gromgit/tools"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "73a6ad72e3bea1cec2329074eeb57d1177ab79f87920574035bda4344c57e3a5"
-    sha256 cellar: :any_skip_relocation, ventura:      "0ba4558d30627f117cb9d62308086852b63a21ffa16895e3e6e30f3cca81028d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "4eaa288566b3a086f4724e73960b441f66a59e6246ebebc827ccffd2e7e5d4ec"
+    sha256 cellar: :any_skip_relocation, arm64_golden_gate: "efaec6850938d87e93b36fcb196bf798cf3b4e47ac768fffa61fb6cba063daa9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:       "961050379379f12cdd8be55730da714256a54506487135f12a0b52b683db4c77"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:     "e4864b06f581c535a2bca85e3671eec8cfcbb428739fa91f769f02fe30d96f4d"
+    sha256 cellar: :any,                 arm64_linux:       "998fe3f0baac2175ba6226fd74bc0863199513e514d2afc050ca612b6aef0dbe"
+    sha256 cellar: :any,                 x86_64_linux:      "519cdb0c08abefd5c9f77498efaa282a44868f1e77e71e22ab536adfb7d755af"
   end
 
   depends_on "rust" => :build
